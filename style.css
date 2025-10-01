@@ -1,0 +1,176 @@
+/* ===== БАЗА (как у тебя в исходном коде, для ПК) ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 20px;
+}
+
+/* Списки */
+ul li,
+ol li {
+    font-size: 19px;
+}
+ul li a img {
+    width: 360px;
+    height: auto;
+}
+ul li::marker {
+    color: #dd239f;
+}
+ol li::marker {
+    color: hotpink;
+}
+
+/* Форма */
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 300px; /* фиксированная ширина как в исходном коде */
+    padding: 8px;
+    border: 1px solid #dd239f;
+    border-radius: 4px;
+    font-size: 14px;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+.required {
+    color: pink;
+}
+fieldset {
+    border: 1px solid #dd239f;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    align-items: center;
+    background: hotpink;
+    color: pink;
+    padding: 15px;
+}
+header .logo {
+    margin-right: 15px;
+}
+header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Меню */
+nav {
+    background: #d82c68;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Таблица */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background: #f84a92;
+}
+tr:nth-child(odd) {
+    background: #ec0493;
+}
+
+/* Подвал */
+footer {
+    background: hotpink;
+    color: pink;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ===== АДАПТИВ под мобильные (Mobile First через max-width) ===== */
+@media (max-width: 767px) {
+    /* Шапка в колонку */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header .logo {
+        margin: 0 0 10px 0;
+    }
+
+    /* Меню вертикальное */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Секции идут в колонку */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Меняем порядок: таблица выше списка */
+    main section:nth-child(1) { order: 2; } /* список */
+    main section:nth-child(2) { order: 1; } /* таблица */
+    main section:nth-child(3) { order: 3; } /* форма */
+
+    /* Форма и поля на всю ширину экрана */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+        width: 100%;
+    }
+}
