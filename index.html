@@ -1,9 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Persik</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,114 +19,115 @@
     <!-- Меню -->
     <nav>
         <ul>
-            <li><a href="#"> Меню 1</a></li>
-            <li><a href="#"> Меню 2</a></li>
-            <li><a href="#"> Меню 3</a></li>
+            <li><a href="#">Меню 1</a></li>
+            <li><a href="#">Меню 2</a></li>
+            <li><a href="#">Меню 3</a></li>
         </ul>
     </nav>
 
     <main>
-        <!-- Список ссылок -->
-        <section>
-            <h2>Список гиперссылок</h2>
-           <ul>
-        <li><a href="http://kubsu.ru/">1. Абсолютная ссылка на главную страницу сайта kubsu.ru (http)</a></li>
-        <li><a href="https://kubsu.ru/">2. Абсолютная ссылка на главную страницу kubsu.ru (https)</a></li>
-
-        <!-- 3. Ссылка-изображение -->
-        <li>
-            <a href="https://kubsu.ru/">
-                <img src="photo_2025-09-21_23-25-34.jpg" alt="Изображение KubSU" width="300">
-            </a> — 3. Ссылка-изображение
-        </li>
-
-        <li><a href="inner.html">4. Сокращённая ссылка на внутреннюю страницу</a></li>
-        <li><a href="/">5. Сокращённая ссылка на главную страницу</a></li>
-        <li><a href="#fragment">6. Ссылка на фрагмент текущей страницы</a></li>
-        <li><a href="search.html?query=html&sort=date&user=student">7. Ссылка с тремя параметрами в URL</a></li>
-        <li><a href="page.html?id=15">8. Ссылка с параметром id в URL</a></li>
-        <li><a href="page.html">9. Относительная ссылка на страницу в текущем каталоге</a></li>
-        <li><a href="about/page.html">10. Относительная ссылка на страницу в каталоге about</a></li>
-        <li><a href="../page.html">11. Относительная ссылка на страницу уровнем выше</a></li>
-        <li><a href="../../index.html">12. Относительная ссылка на страницу двумя уровнями выше</a></li>
-
-        <li>13. Контекстная ссылка в тексте: 
-            Узнать больше о <a href="https://developer.mozilla.org/ru/docs/Web/HTML">HTML</a>.
-        </li>
-
-        <li><a href="https://example.com/page#section2">14. Ссылка на фрагмент стороннего сайта</a></li>
-
-        <!-- 15. Карта изображений -->
-        <li>
-            15. Ссылки из областей картинки (HTML-тег map):<br>
-            <img src="photo_2025-09-21_23-25-34.jpg" usemap="#image-map" alt="Моё фото" width="400">
-            <map name="image-map">
-                <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область">
-                <area shape="circle" coords="300,100,60" href="https://example.com" alt="Круглая область">
-            </map>
-        </li>
-
-        <li><a href="">16. Ссылка с пустым href</a></li>
-        <li><a>17. Ссылка без href</a></li>
-        <li><a href="https://example.com/nofollow" rel="nofollow">18. Ссылка, по которой запрещён переход поисковикам</a></li>
-        <li><a href="https://example.com/" rel="noindex">19. Ссылка, запрещённая для индексации поисковиками</a></li>
-
-        <li>
-            <ol>
-                <li><a href="https://kubsu.ru/" title="Главная КубГУ">Главная КубГУ</a></li>
-                <li><a href="https://developer.mozilla.org/" title="Документация MDN">MDN Docs</a></li>
-            </ol>
-            — 20. Нумерованный список ссылок с подписями title
-        </li>
-
-        <li><a href="ftp://user:password@ftp.example.com/file.txt">21. Ссылка на файл на сервере FTP с авторизацией</a></li>
-    </ul>
-
+        <!-- Таблица (в HTML потоке идет ПЕРВОЙ, но на мобильных будет отображаться ВТОРОЙ) -->
+        <section class="table-section">
+            <h2>Таблица</h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Колонка 1</th>
+                        <th>Колонка 2</th>
+                        <th>Колонка 3</th>
+                        <th>Колонка 4</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Объединение</td>
+                        <td>Данные 1</td>
+                        <td>Данные 2</td>
+                        <td>Данные 3</td>
+                    </tr>
+                    <tr>
+                        <td>Данные 4</td>
+                        <td>Данные 5</td>
+                        <td>Данные 6</td>
+                    </tr>
+                    <tr>
+                        <td>Данные 7</td>
+                        <td colspan="2">Объединение</td>
+                        <td>Данные 8</td>
+                    </tr>
+                    <tr>
+                        <td>Данные 9</td>
+                        <td>Данные 10</td>
+                        <td>Данные 11</td>
+                        <td>Данные 12</td>
+                    </tr>
+                    <tr>
+                        <td>Данные 13</td>
+                        <td>Данные 14</td>
+                        <td>Данные 15</td>
+                        <td>Данные 16</td>
+                    </tr>
+                </table>
+            </div>
         </section>
 
-        <!-- Таблица -->
-        <section>
-            <h2>Таблица</h2>
-            <table>
-                <tr>
-                    <th>Колонка 1</th>
-                    <th>Колонка 2</th>
-                    <th>Колонка 3</th>
-                    <th>Колонка 4</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">Объединение</td>
-                    <td>Данные 1</td>
-                    <td>Данные 2</td>
-                    <td>Данные 3</td>
-                </tr>
-                <tr>
-                    <td>Данные 4</td>
-                    <td>Данные 5</td>
-                    <td>Данные 6</td>
-                </tr>
-                <tr>
-                    <td>Данные 7</td>
-                    <td colspan="2">Объединение</td>
-                    <td>Данные 8</td>
-                </tr>
-                <tr>
-                    <td>Данные 9</td>
-                    <td>Данные 10</td>
-                    <td>Данные 11</td>
-                    <td>Данные 12</td>
-                </tr>
-                <tr>
-                    <td>Данные 13</td>
-                    <td>Данные 14</td>
-                    <td>Данные 15</td>
-                    <td>Данные 16</td>
-                </tr>
-            </table>
+        <!-- Список ссылок (в HTML потоке идет ВТОРЫМ, но на мобильных будет отображаться ПЕРВЫМ) -->
+        <section class="links-section">
+            <h2>Список гиперссылок</h2>
+            <ul class="links-list">
+                <li><a href="http://kubsu.ru/">1. Абсолютная ссылка на главную страницу сайта kubsu.ru (http)</a></li>
+                <li><a href="https://kubsu.ru/">2. Абсолютная ссылка на главную страницу kubsu.ru (https)</a></li>
+
+                <!-- 3. Ссылка-изображение -->
+                <li class="image-link">
+                    <a href="https://kubsu.ru/">
+                        <img src="photo_2025-09-21_23-25-34.jpg" alt="Изображение KubSU">
+                    </a>
+                    <span>— 3. Ссылка-изображение</span>
+                </li>
+
+                <li><a href="inner.html">4. Сокращённая ссылка на внутреннюю страницу</a></li>
+                <li><a href="/">5. Сокращённая ссылка на главную страницу</a></li>
+                <li><a href="#fragment">6. Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="search.html?query=html&sort=date&user=student">7. Ссылка с тремя параметрами в URL</a></li>
+                <li><a href="page.html?id=15">8. Ссылка с параметром id в URL</a></li>
+                <li><a href="page.html">9. Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li><a href="about/page.html">10. Относительная ссылка на страницу в каталоге about</a></li>
+                <li><a href="../page.html">11. Относительная ссылка на страницу уровнем выше</a></li>
+                <li><a href="../../index.html">12. Относительная ссылка на страницу двумя уровнями выше</a></li>
+
+                <li>13. Контекстная ссылка в тексте: 
+                    Узнать больше о <a href="https://developer.mozilla.org/ru/docs/Web/HTML">HTML</a>.
+                </li>
+
+                <li><a href="https://example.com/page#section2">14. Ссылка на фрагмент стороннего сайта</a></li>
+                <!-- 15. Карта изображений -->
+                <li class="image-map">
+                    <p>15. Ссылки из областей картинки (HTML-тег map):</p>
+                    <img src="photo_2025-09-21_23-25-34.jpg" usemap="#image-map" alt="Моё фото">
+                    <map name="image-map">
+                        <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/" alt="Прямоугольная область">
+                        <area shape="circle" coords="300,100,60" href="https://example.com" alt="Круглая область">
+                    </map>
+                </li>
+
+                <li><a href="">16. Ссылка с пустым href</a></li>
+                <li><a>17. Ссылка без href</a></li>
+                <li><a href="https://example.com/nofollow" rel="nofollow">18. Ссылка, по которой запрещён переход поисковикам</a></li>
+                <li><a href="https://example.com/" rel="noindex">19. Ссылка, запрещённая для индексации поисковиками</a></li>
+
+                <li class="numbered-links">
+                    <p>— 20. Нумерованный список ссылок с подписями title</p>
+                    <ol>
+                        <li><a href="https://kubsu.ru/" title="Главная КубГУ">Главная КубГУ</a></li>
+                        <li><a href="https://developer.mozilla.org/" title="Документация MDN">MDN Docs</a></li>
+                    </ol>
+                </li>
+
+                <li><a href="ftp://user:password@ftp.example.com/file.txt">21. Ссылка на файл на сервере FTP с авторизацией</a></li>
+            </ul>
         </section>
 
         <!-- Форма -->
-        <section>
+        <section class="form-section">
             <h2>Форма регистрации</h2>
             <form action="https://httpbin.org/post" method="post" enctype="application/x-www-form-urlencoded">
                 <fieldset>
@@ -152,8 +152,10 @@
 
                 <fieldset>
                     <legend>Пол</legend>
-                    <label><input type="radio" name="gender" value="male"> Мужской</label>
-                    <label><input type="radio" name="gender" value="female"> Женский</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Мужской</label>
+                        <label><input type="radio" name="gender" value="female"> Женский</label>
+                    </div>
                 </fieldset>
 
                 <fieldset>
@@ -178,8 +180,10 @@
                     <textarea id="bio" name="bio" placeholder="Расскажите о себе..."></textarea>
                 </fieldset>
 
-                <label><input type="checkbox" name="agreement" required> С контрактом ознакомлен(а)</label>
-                <br><br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="agreement" required> С контрактом ознакомлен(а)</label>
+                </div>
+                
                 <button type="submit">Сохранить</button>
             </form>
         </section>
@@ -190,6 +194,5 @@
         <p>© Доценко Маргарита</p>
     </footer>
 </body>
-
-
 </html>
+                        
