@@ -1,3 +1,4 @@
+/* Mobile First стили - для мобильных телефонов */
 * {
     margin: 0;
     padding: 0;
@@ -88,14 +89,13 @@ main {
     width: 100%;
 }
 
-/* ИЗМЕНЕНИЕ ПОРЯДКА ЭЛЕМЕНТОВ НА МОБИЛЬНЫХ */
-/* На мобильных: таблица ПЕРВАЯ, ссылки ВТОРЫЕ */
+/* ПО УМОЛЧАНИЮ (мобильные): таблица ПЕРВАЯ, ссылки ВТОРЫЕ */
 .table-section {
-    order: 1; /* Таблица становится первой */
+    order: 1; /* Таблица становится первой на мобильных */
 }
 
 .links-section {
-    order: 2; /* Ссылки становятся вторыми */
+    order: 2; /* Ссылки становятся вторыми на мобильных */
 }
 
 .form-section {
@@ -177,7 +177,7 @@ th, td {
     text-align: center;
 }
 
-/* Чередование цветов строк таблицы - ВАШИ оригинальные цвета */
+/* Чередование цветов строк таблицы */
 tr:nth-child(even) {
     background: #f84a92;
 }
@@ -297,31 +297,31 @@ footer {
     width: 100%;
 }
 
-/* Медиа-запросы для планшетов (768px и выше) */
-@media (min-width: 768px) {
+/* МЕДИА-ЗАПРОС ДЛЯ ПЛАНШЕТОВ И ДЕСКТОПОВ (768px и выше) */
+@media screen and (min-width: 768px) {
     /* НА ПЛАНШЕТАХ И ДЕСКТОПАХ: ссылки ПЕРВЫЕ, таблица ВТОРЫЕ */
     .links-section {
-        order: 1; /* Ссылки становятся первыми */
+        order: 1 !important; /* Ссылки становятся первыми */
     }
     
     .table-section {
-        order: 2; /* Таблица становится второй */
+        order: 2 !important; /* Таблица становится второй */
     }
     
     .form-section {
-        order: 3; /* Форма остается третьей */
+        order: 3 !important; /* Форма остается третьей */
     }
     
     /* Горизонтальное меню для планшетов и десктопов */
     nav ul {
-        flex-direction: row;
+        flex-direction: row !important;
         justify-content: center;
     }
     
     nav ul li {
-        display: inline-block;
+        display: inline-block !important;
         margin: 0 15px;
-        border-bottom: none;
+        border-bottom: none !important;
     }
     
     nav ul li a {
@@ -352,21 +352,8 @@ footer {
         width: 80%;
         margin: 20px auto;
     }
-}
-
-/* Медиа-запросы для десктопов (1024px и выше) */
-@media (min-width: 1024px) {
-    main {
-        padding: 20px;
-    }
     
-    /* Увеличиваем изображения */
-    .image-link img,
-    .image-map img {
-        max-height: 250px;
-    }
-    
-    /* Форма */
+    /* Форма для больших экранов */
     input[type="text"],
     input[type="tel"],
     input[type="email"],
