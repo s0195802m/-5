@@ -10,6 +10,7 @@ body {
     padding: 0;
     font-size: 16px;
     line-height: 1.6;
+    background-color: white;
 }
 
 /* Шапка */
@@ -175,13 +176,20 @@ th, td {
     text-align: center;
 }
 
-/* Чередование цветов строк таблицы */
+/* Чередование цветов строк таблицы - ВАШИ оригинальные цвета */
 tr:nth-child(even) {
     background: #f84a92;
 }
 
 tr:nth-child(odd) {
     background: #ec0493;
+}
+
+/* Заголовки таблицы */
+th {
+    background: #d82c68;
+    color: black;
+    font-weight: bold;
 }
 
 /* Форма */
@@ -337,16 +345,16 @@ footer {
         flex-direction: row;
         gap: 20px;
     }
+    
+    /* Таблица для больших экранов */
+    table {
+        width: 80%;
+        margin: 20px auto;
+    }
 }
 
 /* Медиа-запросы для десктопов (1024px и выше) */
 @media (min-width: 1024px) {
-    body {
-        max-width: 1200px;
-        margin: 0 auto;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    
     main {
         padding: 20px;
     }
@@ -355,12 +363,6 @@ footer {
     .image-link img,
     .image-map img {
         max-height: 250px;
-    }
-    
-    /* Таблица */
-    table {
-        width: 90%;
-        margin: 20px auto;
     }
     
     /* Форма */
